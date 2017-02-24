@@ -9,6 +9,6 @@ package pojos;
  *
  * @author Niko
  */
-public class Participante {
+public class Participante extends A_Persona{
     
 }

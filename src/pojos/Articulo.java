@@ -11,4 +11,6 @@ package pojos;
  */
 public class Articulo {
     
+    
+    
 }
