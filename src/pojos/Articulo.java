@@ -11,6 +11,9 @@ package pojos;
  */
 public class Articulo {
     
-    
-    
+    private int id;
+    private int nombre;
+    private String tam;
+    private String tema;
+    private ArrayList<Autor> autores;
 }
