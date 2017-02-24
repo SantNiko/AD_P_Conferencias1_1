@@ -15,7 +15,11 @@ public class AD_P_Conferencias1_1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        /*
+            Vamos a crear una interfaz grafica 
+        */
+        
     }
     
 }
