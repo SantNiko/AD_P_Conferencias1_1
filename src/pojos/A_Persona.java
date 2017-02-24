@@ -5,7 +5,7 @@ import java.util.Objects;
 /**
  * @author Niko
  */
-public abstract class A_Persona {
+public class A_Persona {
     
     private String dni;
     private String nombre;

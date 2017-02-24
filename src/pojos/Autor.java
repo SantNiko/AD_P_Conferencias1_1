@@ -31,7 +31,7 @@ public class Autor extends A_Persona{
 
     @Override
     public String toString() {
-        return "Autor{ " +super.toString()+ " articulos=" + articulos + '}';
+        return "Autor{ " +super.toString()+ " articulos=" + articulos() + '}';
     }
 
     public ArrayList<Articulo> getArticulos() {
@@ -72,6 +72,15 @@ public class Autor extends A_Persona{
     
     public boolean removeArticulo(Collection<Articulo> arts){
         return articulos.removeAll(arts);
+    }
+    
+    private String articulos(){
+        String r = "{";
+        for (Articulo art : articulos) {
+            r+=art.getNombre()+",";
+        }
+        r = ""+r.subSequence(0, r.length()-1)+"}";
+        return r;
     }
     
 }

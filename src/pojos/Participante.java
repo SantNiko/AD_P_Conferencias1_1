@@ -11,4 +11,31 @@ package pojos;
  */
 public class Participante extends A_Persona{
     
+    public static final String ROL_ORADOR = "orador";
+    public static final String ROL_PUBLICO = "orador";
+    
+    private String rol;
+
+    public Participante() {
+    }
+
+    public Participante(String rol, String dni, String nombre) {
+        super(dni, nombre);
+        this.rol = rol;
+    }
+
+    @Override
+    public String toString() {
+        return "Participante{" +super.toString()+ "rol=" + rol + '}';
+    }
+
+    public String getRol() {
+        return rol;
+    }
+
+    public void setRol(String rol) {
+        this.rol = rol;
+    }
+    
+    
 }

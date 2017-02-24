@@ -14,6 +14,9 @@ import java.util.Collection;
  */
 public class Articulo {
     
+    public static final String TAM_CORTO = "corto";
+    public static final String TAM_LARGO = "largo";
+    
     private int id;
     private int nombre;
     private String tam;
@@ -37,6 +40,11 @@ public class Articulo {
         this.tam = tam;
         this.tema = tema;
         this.autores = autores;
+    }
+
+    @Override
+    public String toString() {
+        return "Articulo{" + "id=" + id + ", nombre=" + nombre + ", tam=" + tam + ", tema=" + tema + ", autores=" + autores() + '}';
     }
 
     public int getId() {
@@ -109,5 +117,14 @@ public class Articulo {
     
     public boolean removeAutores(Collection<Autor> auts){
         return autores.removeAll(auts);
+    }
+    
+    private String autores(){
+        String r = "{";
+        for (Autor autor : autores) {
+            r+=autor.getNombre()+",";
+        }
+        r = ""+r.subSequence(0, r.length()-1)+"}";
+        return r;
     }
 }
