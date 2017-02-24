@@ -109,4 +109,5 @@ public class Articulo {
     
     public boolean removeAutores(Collection<Autor> auts){
         return autores.removeAll(auts);
+    }
 }
