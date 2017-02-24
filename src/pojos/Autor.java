@@ -29,6 +29,11 @@ public class Autor extends A_Persona{
         this.articulos = articulos;
     }
 
+    @Override
+    public String toString() {
+        return "Autor{ " +super.toString()+ " articulos=" + articulos + '}';
+    }
+
     public ArrayList<Articulo> getArticulos() {
         return articulos;
     }
