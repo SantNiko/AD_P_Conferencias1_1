@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 28-feb-2017 16:09:17 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="hmapasinversa.Sesiones" table="sesiones" catalog="hconferencias" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="articulos" class="hmapasinversa.Articulos" fetch="select">
+            <column name="articulo" not-null="true" />
+        </many-to-one>
+        <many-to-one name="conferencias" class="hmapasinversa.Conferencias" fetch="select">
+            <column name="conferencia" not-null="true" />
+        </many-to-one>
+        <property name="nombre" type="string">
+            <column name="nombre" length="45" not-null="true" />
+        </property>
+        <property name="info" type="string">
+            <column name="info" length="45" not-null="true" />
+        </property>
+        <property name="fechaHoraInicio" type="double">
+            <column name="fechaHoraInicio" precision="22" scale="0" not-null="true" />
+        </property>
+        <set name="participanteses" table="oradores_sesiones" inverse="false" lazy="true" fetch="select">
+            <key>
+                <column name="sesion" not-null="true" />
+            </key>
+            <many-to-many entity-name="hmapasinversa.Participantes">
+                <column name="participante" length="9" not-null="true" />
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

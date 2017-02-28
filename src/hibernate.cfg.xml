@@ -6,10 +6,13 @@
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3307/hconferencias</property>
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">usbw</property>
-    <property name="hibernate.hbm2ddl.auto">create-drop</property>
-    <mapping resource="hmapas/Conferencia.hbm.xml"/>
-    <mapping resource="hmapas/Articulo.hbm.xml"/>
-    <mapping resource="hmapas/A_Persona.hbm.xml"/>
-    <mapping resource="hmapas/Sesion.hbm.xml"/>
+    <property name="hibernate.hbm2ddl.auto">create-drop</property> 
+    <mapping resource="hmapasinversa/Personas.hbm.xml"/>
+    <mapping resource="hmapasinversa/ParticipantesConferencias.hbm.xml"/>
+    <mapping resource="hmapasinversa/Participantes.hbm.xml"/>
+    <mapping resource="hmapasinversa/Conferencias.hbm.xml"/>
+    <mapping resource="hmapasinversa/Autores.hbm.xml"/>
+    <mapping resource="hmapasinversa/Sesiones.hbm.xml"/>
+    <mapping resource="hmapasinversa/Articulos.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>
