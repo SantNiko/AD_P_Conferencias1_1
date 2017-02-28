@@ -5,6 +5,13 @@
  */
 package proxectoaad;
 
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JEditorPane;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+
 /**
  *
  * @author AnxoPregal
@@ -211,6 +218,134 @@ public class Personas extends javax.swing.JFrame {
                 new Personas().setVisible(true);
             }
         });
+    }
+
+    public JButton getGuardar() {
+        return Guardar;
+    }
+
+    public void setGuardar(JButton Guardar) {
+        this.Guardar = Guardar;
+    }
+
+    public JButton getBtnAtras() {
+        return btnAtras;
+    }
+
+    public void setBtnAtras(JButton btnAtras) {
+        this.btnAtras = btnAtras;
+    }
+
+    public JButton getBtnEditar() {
+        return btnEditar;
+    }
+
+    public void setBtnEditar(JButton btnEditar) {
+        this.btnEditar = btnEditar;
+    }
+
+    public JEditorPane getjEditorPane2() {
+        return jEditorPane2;
+    }
+
+    public void setjEditorPane2(JEditorPane jEditorPane2) {
+        this.jEditorPane2 = jEditorPane2;
+    }
+
+    public JEditorPane getjEditorPane3() {
+        return jEditorPane3;
+    }
+
+    public void setjEditorPane3(JEditorPane jEditorPane3) {
+        this.jEditorPane3 = jEditorPane3;
+    }
+
+    public JEditorPane getjEditorPane9() {
+        return jEditorPane9;
+    }
+
+    public void setjEditorPane9(JEditorPane jEditorPane9) {
+        this.jEditorPane9 = jEditorPane9;
+    }
+
+    public JCheckBox getJcbConfirmar() {
+        return jcbConfirmar;
+    }
+
+    public void setJcbConfirmar(JCheckBox jcbConfirmar) {
+        this.jcbConfirmar = jcbConfirmar;
+    }
+
+    public JPanel getJpCabecera() {
+        return jpCabecera;
+    }
+
+    public void setJpCabecera(JPanel jpCabecera) {
+        this.jpCabecera = jpCabecera;
+    }
+
+    public JPanel getJpDatosConfNueva() {
+        return jpDatosConfNueva;
+    }
+
+    public void setJpDatosConfNueva(JPanel jpDatosConfNueva) {
+        this.jpDatosConfNueva = jpDatosConfNueva;
+    }
+
+    public JScrollPane getJsEmail() {
+        return jsEmail;
+    }
+
+    public void setJsEmail(JScrollPane jsEmail) {
+        this.jsEmail = jsEmail;
+    }
+
+    public JScrollPane getJsId() {
+        return jsId;
+    }
+
+    public void setJsId(JScrollPane jsId) {
+        this.jsId = jsId;
+    }
+
+    public JScrollPane getJsNombre() {
+        return jsNombre;
+    }
+
+    public void setJsNombre(JScrollPane jsNombre) {
+        this.jsNombre = jsNombre;
+    }
+
+    public JLabel getLblConferencia() {
+        return lblConferencia;
+    }
+
+    public void setLblConferencia(JLabel lblConferencia) {
+        this.lblConferencia = lblConferencia;
+    }
+
+    public JLabel getLblEmail() {
+        return lblEmail;
+    }
+
+    public void setLblEmail(JLabel lblEmail) {
+        this.lblEmail = lblEmail;
+    }
+
+    public JLabel getLblId() {
+        return lblId;
+    }
+
+    public void setLblId(JLabel lblId) {
+        this.lblId = lblId;
+    }
+
+    public JLabel getLblNombre() {
+        return lblNombre;
+    }
+
+    public void setLblNombre(JLabel lblNombre) {
+        this.lblNombre = lblNombre;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

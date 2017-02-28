@@ -5,6 +5,14 @@
  */
 package proxectoaad;
 
+import javax.swing.JButton;
+import javax.swing.JEditorPane;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+
 /**
  *
  * @author AnxoPregal
@@ -428,6 +436,310 @@ public class SesionesNuevo extends javax.swing.JFrame {
                 new SesionesNuevo().setVisible(true);
             }
         });
+    }
+
+    public JButton getGuardar() {
+        return Guardar;
+    }
+
+    public void setGuardar(JButton Guardar) {
+        this.Guardar = Guardar;
+    }
+
+    public JButton getBtnAnadirSesion() {
+        return btnAnadirSesion;
+    }
+
+    public void setBtnAnadirSesion(JButton btnAnadirSesion) {
+        this.btnAnadirSesion = btnAnadirSesion;
+    }
+
+    public JButton getBtnAnadirSesion1() {
+        return btnAnadirSesion1;
+    }
+
+    public void setBtnAnadirSesion1(JButton btnAnadirSesion1) {
+        this.btnAnadirSesion1 = btnAnadirSesion1;
+    }
+
+    public JButton getBtnAtras() {
+        return btnAtras;
+    }
+
+    public void setBtnAtras(JButton btnAtras) {
+        this.btnAtras = btnAtras;
+    }
+
+    public JButton getBtnBorrarSesion() {
+        return btnBorrarSesion;
+    }
+
+    public void setBtnBorrarSesion(JButton btnBorrarSesion) {
+        this.btnBorrarSesion = btnBorrarSesion;
+    }
+
+    public JButton getBtnEditar() {
+        return btnEditar;
+    }
+
+    public void setBtnEditar(JButton btnEditar) {
+        this.btnEditar = btnEditar;
+    }
+
+    public JButton getBtnInfoSesion() {
+        return btnInfoSesion;
+    }
+
+    public void setBtnInfoSesion(JButton btnInfoSesion) {
+        this.btnInfoSesion = btnInfoSesion;
+    }
+
+    public JEditorPane getjEditorPane2() {
+        return jEditorPane2;
+    }
+
+    public void setjEditorPane2(JEditorPane jEditorPane2) {
+        this.jEditorPane2 = jEditorPane2;
+    }
+
+    public JEditorPane getjEditorPane3() {
+        return jEditorPane3;
+    }
+
+    public void setjEditorPane3(JEditorPane jEditorPane3) {
+        this.jEditorPane3 = jEditorPane3;
+    }
+
+    public JEditorPane getjEditorPane4() {
+        return jEditorPane4;
+    }
+
+    public void setjEditorPane4(JEditorPane jEditorPane4) {
+        this.jEditorPane4 = jEditorPane4;
+    }
+
+    public JEditorPane getjEditorPane5() {
+        return jEditorPane5;
+    }
+
+    public void setjEditorPane5(JEditorPane jEditorPane5) {
+        this.jEditorPane5 = jEditorPane5;
+    }
+
+    public JEditorPane getjEditorPane6() {
+        return jEditorPane6;
+    }
+
+    public void setjEditorPane6(JEditorPane jEditorPane6) {
+        this.jEditorPane6 = jEditorPane6;
+    }
+
+    public JEditorPane getjEditorPane8() {
+        return jEditorPane8;
+    }
+
+    public void setjEditorPane8(JEditorPane jEditorPane8) {
+        this.jEditorPane8 = jEditorPane8;
+    }
+
+    public JEditorPane getjEditorPane9() {
+        return jEditorPane9;
+    }
+
+    public void setjEditorPane9(JEditorPane jEditorPane9) {
+        this.jEditorPane9 = jEditorPane9;
+    }
+
+    public JList<String> getjList1() {
+        return jList1;
+    }
+
+    public void setjList1(JList<String> jList1) {
+        this.jList1 = jList1;
+    }
+
+    public JTextArea getjTextArea1() {
+        return jTextArea1;
+    }
+
+    public void setjTextArea1(JTextArea jTextArea1) {
+        this.jTextArea1 = jTextArea1;
+    }
+
+    public JPanel getJpBotonesSesiones() {
+        return jpBotonesSesiones;
+    }
+
+    public void setJpBotonesSesiones(JPanel jpBotonesSesiones) {
+        this.jpBotonesSesiones = jpBotonesSesiones;
+    }
+
+    public JPanel getJpCabecera() {
+        return jpCabecera;
+    }
+
+    public void setJpCabecera(JPanel jpCabecera) {
+        this.jpCabecera = jpCabecera;
+    }
+
+    public JPanel getJpDatosConfNueva() {
+        return jpDatosConfNueva;
+    }
+
+    public void setJpDatosConfNueva(JPanel jpDatosConfNueva) {
+        this.jpDatosConfNueva = jpDatosConfNueva;
+    }
+
+    public JScrollPane getJsArticulo() {
+        return jsArticulo;
+    }
+
+    public void setJsArticulo(JScrollPane jsArticulo) {
+        this.jsArticulo = jsArticulo;
+    }
+
+    public JScrollPane getJsDescripcion() {
+        return jsDescripcion;
+    }
+
+    public void setJsDescripcion(JScrollPane jsDescripcion) {
+        this.jsDescripcion = jsDescripcion;
+    }
+
+    public JScrollPane getJsDuracion() {
+        return jsDuracion;
+    }
+
+    public void setJsDuracion(JScrollPane jsDuracion) {
+        this.jsDuracion = jsDuracion;
+    }
+
+    public JScrollPane getJsFechaInicio() {
+        return jsFechaInicio;
+    }
+
+    public void setJsFechaInicio(JScrollPane jsFechaInicio) {
+        this.jsFechaInicio = jsFechaInicio;
+    }
+
+    public JScrollPane getJsHoraInicio() {
+        return jsHoraInicio;
+    }
+
+    public void setJsHoraInicio(JScrollPane jsHoraInicio) {
+        this.jsHoraInicio = jsHoraInicio;
+    }
+
+    public JScrollPane getJsId() {
+        return jsId;
+    }
+
+    public void setJsId(JScrollPane jsId) {
+        this.jsId = jsId;
+    }
+
+    public JScrollPane getJsNombre() {
+        return jsNombre;
+    }
+
+    public void setJsNombre(JScrollPane jsNombre) {
+        this.jsNombre = jsNombre;
+    }
+
+    public JScrollPane getJsTema() {
+        return jsTema;
+    }
+
+    public void setJsTema(JScrollPane jsTema) {
+        this.jsTema = jsTema;
+    }
+
+    public JScrollPane getJslOradores() {
+        return jslOradores;
+    }
+
+    public void setJslOradores(JScrollPane jslOradores) {
+        this.jslOradores = jslOradores;
+    }
+
+    public JLabel getLblConferencia() {
+        return lblConferencia;
+    }
+
+    public void setLblConferencia(JLabel lblConferencia) {
+        this.lblConferencia = lblConferencia;
+    }
+
+    public JLabel getLblDescripcion() {
+        return lblDescripcion;
+    }
+
+    public void setLblDescripcion(JLabel lblDescripcion) {
+        this.lblDescripcion = lblDescripcion;
+    }
+
+    public JLabel getLblFechaInicio() {
+        return lblFechaInicio;
+    }
+
+    public void setLblFechaInicio(JLabel lblFechaInicio) {
+        this.lblFechaInicio = lblFechaInicio;
+    }
+
+    public JLabel getLblHoraFin() {
+        return lblHoraFin;
+    }
+
+    public void setLblHoraFin(JLabel lblHoraFin) {
+        this.lblHoraFin = lblHoraFin;
+    }
+
+    public JLabel getLblHoraInicio() {
+        return lblHoraInicio;
+    }
+
+    public void setLblHoraInicio(JLabel lblHoraInicio) {
+        this.lblHoraInicio = lblHoraInicio;
+    }
+
+    public JLabel getLblId() {
+        return lblId;
+    }
+
+    public void setLblId(JLabel lblId) {
+        this.lblId = lblId;
+    }
+
+    public JLabel getLblNSesiones() {
+        return lblNSesiones;
+    }
+
+    public void setLblNSesiones(JLabel lblNSesiones) {
+        this.lblNSesiones = lblNSesiones;
+    }
+
+    public JLabel getLblNombre() {
+        return lblNombre;
+    }
+
+    public void setLblNombre(JLabel lblNombre) {
+        this.lblNombre = lblNombre;
+    }
+
+    public JLabel getLblOradores() {
+        return lblOradores;
+    }
+
+    public void setLblOradores(JLabel lblOradores) {
+        this.lblOradores = lblOradores;
+    }
+
+    public JLabel getLblTema() {
+        return lblTema;
+    }
+
+    public void setLblTema(JLabel lblTema) {
+        this.lblTema = lblTema;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -5,7 +5,10 @@
  */
 package proxectoaad;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 /**
  *
@@ -156,6 +159,46 @@ public class main extends javax.swing.JFrame {
                 new main().setVisible(true);
             }
         });
+    }
+
+    public JButton getBtnExist() {
+        return btnExist;
+    }
+
+    public void setBtnExist(JButton btnExist) {
+        this.btnExist = btnExist;
+    }
+
+    public JButton getBtnHibernate() {
+        return btnHibernate;
+    }
+
+    public void setBtnHibernate(JButton btnHibernate) {
+        this.btnHibernate = btnHibernate;
+    }
+
+    public JButton getBtnNeodatis() {
+        return btnNeodatis;
+    }
+
+    public void setBtnNeodatis(JButton btnNeodatis) {
+        this.btnNeodatis = btnNeodatis;
+    }
+
+    public JPanel getJpEleccionBD() {
+        return jpEleccionBD;
+    }
+
+    public void setJpEleccionBD(JPanel jpEleccionBD) {
+        this.jpEleccionBD = jpEleccionBD;
+    }
+
+    public JLabel getLblTitulo() {
+        return lblTitulo;
+    }
+
+    public void setLblTitulo(JLabel lblTitulo) {
+        this.lblTitulo = lblTitulo;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

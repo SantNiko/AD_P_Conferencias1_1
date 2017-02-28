@@ -5,6 +5,14 @@
  */
 package proxectoaad;
 
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JEditorPane;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+
 /**
  *
  * @author AnxoPregal
@@ -361,6 +369,190 @@ public class Autor extends javax.swing.JFrame {
                 new Autor().setVisible(true);
             }
         });
+    }
+
+    public JButton getGuardar() {
+        return Guardar;
+    }
+
+    public void setGuardar(JButton Guardar) {
+        this.Guardar = Guardar;
+    }
+
+    public ButtonGroup getBgTamano() {
+        return bgTamano;
+    }
+
+    public void setBgTamano(ButtonGroup bgTamano) {
+        this.bgTamano = bgTamano;
+    }
+
+    public JButton getBtnAnadirSesion() {
+        return btnAnadirSesion;
+    }
+
+    public void setBtnAnadirSesion(JButton btnAnadirSesion) {
+        this.btnAnadirSesion = btnAnadirSesion;
+    }
+
+    public JButton getBtnAtras() {
+        return btnAtras;
+    }
+
+    public void setBtnAtras(JButton btnAtras) {
+        this.btnAtras = btnAtras;
+    }
+
+    public JButton getBtnBorrarSesion() {
+        return btnBorrarSesion;
+    }
+
+    public void setBtnBorrarSesion(JButton btnBorrarSesion) {
+        this.btnBorrarSesion = btnBorrarSesion;
+    }
+
+    public JButton getBtnEditar() {
+        return btnEditar;
+    }
+
+    public void setBtnEditar(JButton btnEditar) {
+        this.btnEditar = btnEditar;
+    }
+
+    public JButton getBtnInfoSesion() {
+        return btnInfoSesion;
+    }
+
+    public void setBtnInfoSesion(JButton btnInfoSesion) {
+        this.btnInfoSesion = btnInfoSesion;
+    }
+
+    public JEditorPane getJeDni() {
+        return jeDni;
+    }
+
+    public void setJeDni(JEditorPane jeDni) {
+        this.jeDni = jeDni;
+    }
+
+    public JEditorPane getJeEmail() {
+        return jeEmail;
+    }
+
+    public void setJeEmail(JEditorPane jeEmail) {
+        this.jeEmail = jeEmail;
+    }
+
+    public JEditorPane getJeNombre() {
+        return jeNombre;
+    }
+
+    public void setJeNombre(JEditorPane jeNombre) {
+        this.jeNombre = jeNombre;
+    }
+
+    public JList<String> getJlArticulos() {
+        return jlArticulos;
+    }
+
+    public void setJlArticulos(JList<String> jlArticulos) {
+        this.jlArticulos = jlArticulos;
+    }
+
+    public JPanel getJpBotonesAutores() {
+        return jpBotonesAutores;
+    }
+
+    public void setJpBotonesAutores(JPanel jpBotonesAutores) {
+        this.jpBotonesAutores = jpBotonesAutores;
+    }
+
+    public JPanel getJpCabecera() {
+        return jpCabecera;
+    }
+
+    public void setJpCabecera(JPanel jpCabecera) {
+        this.jpCabecera = jpCabecera;
+    }
+
+    public JPanel getJpDatosConfNueva() {
+        return jpDatosConfNueva;
+    }
+
+    public void setJpDatosConfNueva(JPanel jpDatosConfNueva) {
+        this.jpDatosConfNueva = jpDatosConfNueva;
+    }
+
+    public JScrollPane getJsEmail() {
+        return jsEmail;
+    }
+
+    public void setJsEmail(JScrollPane jsEmail) {
+        this.jsEmail = jsEmail;
+    }
+
+    public JScrollPane getJsId() {
+        return jsId;
+    }
+
+    public void setJsId(JScrollPane jsId) {
+        this.jsId = jsId;
+    }
+
+    public JScrollPane getJsNombre() {
+        return jsNombre;
+    }
+
+    public void setJsNombre(JScrollPane jsNombre) {
+        this.jsNombre = jsNombre;
+    }
+
+    public JScrollPane getJslAutores() {
+        return jslAutores;
+    }
+
+    public void setJslAutores(JScrollPane jslAutores) {
+        this.jslAutores = jslAutores;
+    }
+
+    public JLabel getLblArticulos() {
+        return lblArticulos;
+    }
+
+    public void setLblArticulos(JLabel lblArticulos) {
+        this.lblArticulos = lblArticulos;
+    }
+
+    public JLabel getLblConferencia() {
+        return lblConferencia;
+    }
+
+    public void setLblConferencia(JLabel lblConferencia) {
+        this.lblConferencia = lblConferencia;
+    }
+
+    public JLabel getLblDni() {
+        return lblDni;
+    }
+
+    public void setLblDni(JLabel lblDni) {
+        this.lblDni = lblDni;
+    }
+
+    public JLabel getLblEmail() {
+        return lblEmail;
+    }
+
+    public void setLblEmail(JLabel lblEmail) {
+        this.lblEmail = lblEmail;
+    }
+
+    public JLabel getLblNombre() {
+        return lblNombre;
+    }
+
+    public void setLblNombre(JLabel lblNombre) {
+        this.lblNombre = lblNombre;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

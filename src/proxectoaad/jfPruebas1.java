@@ -5,7 +5,12 @@
  */
 package proxectoaad;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.ListCellRenderer;
 import oracle.jrockit.jfr.tools.ConCatRepository;
 
@@ -821,6 +826,414 @@ public class jfPruebas1 extends javax.swing.JFrame {
                 new jfPruebas1().setVisible(true);
             }
         });
+    }
+
+    public JButton getBtnAnadirConfe() {
+        return btnAnadirConfe;
+    }
+
+    public void setBtnAnadirConfe(JButton btnAnadirConfe) {
+        this.btnAnadirConfe = btnAnadirConfe;
+    }
+
+    public JButton getBtnAnadirParticipante() {
+        return btnAnadirParticipante;
+    }
+
+    public void setBtnAnadirParticipante(JButton btnAnadirParticipante) {
+        this.btnAnadirParticipante = btnAnadirParticipante;
+    }
+
+    public JButton getBtnAnadirSesion() {
+        return btnAnadirSesion;
+    }
+
+    public void setBtnAnadirSesion(JButton btnAnadirSesion) {
+        this.btnAnadirSesion = btnAnadirSesion;
+    }
+
+    public JButton getBtnAtras() {
+        return btnAtras;
+    }
+
+    public void setBtnAtras(JButton btnAtras) {
+        this.btnAtras = btnAtras;
+    }
+
+    public JButton getBtnBorrarConfe() {
+        return btnBorrarConfe;
+    }
+
+    public void setBtnBorrarConfe(JButton btnBorrarConfe) {
+        this.btnBorrarConfe = btnBorrarConfe;
+    }
+
+    public JButton getBtnBorrarParticipante() {
+        return btnBorrarParticipante;
+    }
+
+    public void setBtnBorrarParticipante(JButton btnBorrarParticipante) {
+        this.btnBorrarParticipante = btnBorrarParticipante;
+    }
+
+    public JButton getBtnBorrarSesion() {
+        return btnBorrarSesion;
+    }
+
+    public void setBtnBorrarSesion(JButton btnBorrarSesion) {
+        this.btnBorrarSesion = btnBorrarSesion;
+    }
+
+    public JButton getBtnEditarConfe() {
+        return btnEditarConfe;
+    }
+
+    public void setBtnEditarConfe(JButton btnEditarConfe) {
+        this.btnEditarConfe = btnEditarConfe;
+    }
+
+    public JButton getBtnInfoParticipante() {
+        return btnInfoParticipante;
+    }
+
+    public void setBtnInfoParticipante(JButton btnInfoParticipante) {
+        this.btnInfoParticipante = btnInfoParticipante;
+    }
+
+    public JButton getBtnInfoSesion() {
+        return btnInfoSesion;
+    }
+
+    public void setBtnInfoSesion(JButton btnInfoSesion) {
+        this.btnInfoSesion = btnInfoSesion;
+    }
+
+    public JLabel getjLabel3() {
+        return jLabel3;
+    }
+
+    public void setjLabel3(JLabel jLabel3) {
+        this.jLabel3 = jLabel3;
+    }
+
+    public JList<String> getjListConfe() {
+        return jListConfe;
+    }
+
+    public void setjListConfe(JList<String> jListConfe) {
+        this.jListConfe = jListConfe;
+    }
+
+    public JList<String> getjListParticipantes() {
+        return jListParticipantes;
+    }
+
+    public void setjListParticipantes(JList<String> jListParticipantes) {
+        this.jListParticipantes = jListParticipantes;
+    }
+
+    public JList<String> getjListSesiones() {
+        return jListSesiones;
+    }
+
+    public void setjListSesiones(JList<String> jListSesiones) {
+        this.jListSesiones = jListSesiones;
+    }
+
+    public JScrollPane getjScrollPaneConfe() {
+        return jScrollPaneConfe;
+    }
+
+    public void setjScrollPaneConfe(JScrollPane jScrollPaneConfe) {
+        this.jScrollPaneConfe = jScrollPaneConfe;
+    }
+
+    public JScrollPane getjScrollPaneParticipantes() {
+        return jScrollPaneParticipantes;
+    }
+
+    public void setjScrollPaneParticipantes(JScrollPane jScrollPaneParticipantes) {
+        this.jScrollPaneParticipantes = jScrollPaneParticipantes;
+    }
+
+    public JScrollPane getjScrollPaneSesiones() {
+        return jScrollPaneSesiones;
+    }
+
+    public void setjScrollPaneSesiones(JScrollPane jScrollPaneSesiones) {
+        this.jScrollPaneSesiones = jScrollPaneSesiones;
+    }
+
+    public JPanel getJpBotonesConfe() {
+        return jpBotonesConfe;
+    }
+
+    public void setJpBotonesConfe(JPanel jpBotonesConfe) {
+        this.jpBotonesConfe = jpBotonesConfe;
+    }
+
+    public JPanel getJpBotonesParticipantes() {
+        return jpBotonesParticipantes;
+    }
+
+    public void setJpBotonesParticipantes(JPanel jpBotonesParticipantes) {
+        this.jpBotonesParticipantes = jpBotonesParticipantes;
+    }
+
+    public JPanel getJpBotonesSesiones() {
+        return jpBotonesSesiones;
+    }
+
+    public void setJpBotonesSesiones(JPanel jpBotonesSesiones) {
+        this.jpBotonesSesiones = jpBotonesSesiones;
+    }
+
+    public JPanel getJpCabecera() {
+        return jpCabecera;
+    }
+
+    public void setJpCabecera(JPanel jpCabecera) {
+        this.jpCabecera = jpCabecera;
+    }
+
+    public JPanel getJpConferencias() {
+        return jpConferencias;
+    }
+
+    public void setJpConferencias(JPanel jpConferencias) {
+        this.jpConferencias = jpConferencias;
+    }
+
+    public JPanel getJpGestionFondo() {
+        return jpGestionFondo;
+    }
+
+    public void setJpGestionFondo(JPanel jpGestionFondo) {
+        this.jpGestionFondo = jpGestionFondo;
+    }
+
+    public JPanel getJpInfo() {
+        return jpInfo;
+    }
+
+    public void setJpInfo(JPanel jpInfo) {
+        this.jpInfo = jpInfo;
+    }
+
+    public JPanel getJpInfoConfe() {
+        return jpInfoConfe;
+    }
+
+    public void setJpInfoConfe(JPanel jpInfoConfe) {
+        this.jpInfoConfe = jpInfoConfe;
+    }
+
+    public JPanel getJpInfoConfeContenido() {
+        return jpInfoConfeContenido;
+    }
+
+    public void setJpInfoConfeContenido(JPanel jpInfoConfeContenido) {
+        this.jpInfoConfeContenido = jpInfoConfeContenido;
+    }
+
+    public JPanel getJpParticipantes() {
+        return jpParticipantes;
+    }
+
+    public void setJpParticipantes(JPanel jpParticipantes) {
+        this.jpParticipantes = jpParticipantes;
+    }
+
+    public JPanel getJpSesiones() {
+        return jpSesiones;
+    }
+
+    public void setJpSesiones(JPanel jpSesiones) {
+        this.jpSesiones = jpSesiones;
+    }
+
+    public JLabel getLblDescripcion() {
+        return lblDescripcion;
+    }
+
+    public void setLblDescripcion(JLabel lblDescripcion) {
+        this.lblDescripcion = lblDescripcion;
+    }
+
+    public JLabel getLblDescripcionEdit() {
+        return lblDescripcionEdit;
+    }
+
+    public void setLblDescripcionEdit(JLabel lblDescripcionEdit) {
+        this.lblDescripcionEdit = lblDescripcionEdit;
+    }
+
+    public JLabel getLblFecha() {
+        return lblFecha;
+    }
+
+    public void setLblFecha(JLabel lblFecha) {
+        this.lblFecha = lblFecha;
+    }
+
+    public JLabel getLblFechaEdit() {
+        return lblFechaEdit;
+    }
+
+    public void setLblFechaEdit(JLabel lblFechaEdit) {
+        this.lblFechaEdit = lblFechaEdit;
+    }
+
+    public JLabel getLblHoraFin() {
+        return lblHoraFin;
+    }
+
+    public void setLblHoraFin(JLabel lblHoraFin) {
+        this.lblHoraFin = lblHoraFin;
+    }
+
+    public JLabel getLblHoraFinEdit() {
+        return lblHoraFinEdit;
+    }
+
+    public void setLblHoraFinEdit(JLabel lblHoraFinEdit) {
+        this.lblHoraFinEdit = lblHoraFinEdit;
+    }
+
+    public JLabel getLblHoraInicio() {
+        return lblHoraInicio;
+    }
+
+    public void setLblHoraInicio(JLabel lblHoraInicio) {
+        this.lblHoraInicio = lblHoraInicio;
+    }
+
+    public JLabel getLblHoraInicioEdit() {
+        return lblHoraInicioEdit;
+    }
+
+    public void setLblHoraInicioEdit(JLabel lblHoraInicioEdit) {
+        this.lblHoraInicioEdit = lblHoraInicioEdit;
+    }
+
+    public JLabel getLblInfoConfe() {
+        return lblInfoConfe;
+    }
+
+    public void setLblInfoConfe(JLabel lblInfoConfe) {
+        this.lblInfoConfe = lblInfoConfe;
+    }
+
+    public JLabel getLblListado() {
+        return lblListado;
+    }
+
+    public void setLblListado(JLabel lblListado) {
+        this.lblListado = lblListado;
+    }
+
+    public JLabel getLblNParticipantes() {
+        return lblNParticipantes;
+    }
+
+    public void setLblNParticipantes(JLabel lblNParticipantes) {
+        this.lblNParticipantes = lblNParticipantes;
+    }
+
+    public JLabel getLblNParticipantesEdit() {
+        return lblNParticipantesEdit;
+    }
+
+    public void setLblNParticipantesEdit(JLabel lblNParticipantesEdit) {
+        this.lblNParticipantesEdit = lblNParticipantesEdit;
+    }
+
+    public JLabel getLblNSesiones() {
+        return lblNSesiones;
+    }
+
+    public void setLblNSesiones(JLabel lblNSesiones) {
+        this.lblNSesiones = lblNSesiones;
+    }
+
+    public JLabel getLblNSesionesEdit() {
+        return lblNSesionesEdit;
+    }
+
+    public void setLblNSesionesEdit(JLabel lblNSesionesEdit) {
+        this.lblNSesionesEdit = lblNSesionesEdit;
+    }
+
+    public JLabel getLblNombre() {
+        return lblNombre;
+    }
+
+    public void setLblNombre(JLabel lblNombre) {
+        this.lblNombre = lblNombre;
+    }
+
+    public JLabel getLblNombreEdit() {
+        return lblNombreEdit;
+    }
+
+    public void setLblNombreEdit(JLabel lblNombreEdit) {
+        this.lblNombreEdit = lblNombreEdit;
+    }
+
+    public JLabel getLblParticipantes() {
+        return lblParticipantes;
+    }
+
+    public void setLblParticipantes(JLabel lblParticipantes) {
+        this.lblParticipantes = lblParticipantes;
+    }
+
+    public JLabel getLblPrecio() {
+        return lblPrecio;
+    }
+
+    public void setLblPrecio(JLabel lblPrecio) {
+        this.lblPrecio = lblPrecio;
+    }
+
+    public JLabel getLblPrecioEdit() {
+        return lblPrecioEdit;
+    }
+
+    public void setLblPrecioEdit(JLabel lblPrecioEdit) {
+        this.lblPrecioEdit = lblPrecioEdit;
+    }
+
+    public JLabel getLblSesiones() {
+        return lblSesiones;
+    }
+
+    public void setLblSesiones(JLabel lblSesiones) {
+        this.lblSesiones = lblSesiones;
+    }
+
+    public JLabel getLblTema() {
+        return lblTema;
+    }
+
+    public void setLblTema(JLabel lblTema) {
+        this.lblTema = lblTema;
+    }
+
+    public JLabel getLblTemaEdit() {
+        return lblTemaEdit;
+    }
+
+    public void setLblTemaEdit(JLabel lblTemaEdit) {
+        this.lblTemaEdit = lblTemaEdit;
+    }
+
+    public JLabel getLblTitulo() {
+        return lblTitulo;
+    }
+
+    public void setLblTitulo(JLabel lblTitulo) {
+        this.lblTitulo = lblTitulo;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
