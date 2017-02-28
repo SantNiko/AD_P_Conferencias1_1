@@ -14,9 +14,8 @@ import java.util.ArrayList;
 public class Participante extends A_Persona{
     
     public static final String ROL_ORADOR = "orador";
-    public static final String ROL_PUBLICO = "orador";
+    public static final String ROL_PUBLICO = "publico";
     
-    private String rol;
     private String email;
     private boolean confirmado;
     private ArrayList<Conferencia> conferencias;
@@ -27,21 +26,18 @@ public class Participante extends A_Persona{
     public Participante() {
     }
 
-    public Participante(String dni, String nombre, String rol, String email) {
+    public Participante(String dni, String nombre, String email) {
         super(dni, nombre);
-        this.rol = rol;
         this.email = email;
         conferencias = new ArrayList<>();
     }
-    public Participante(String dni, String nombre, String rol, String email, Conferencia conferencia) {
+    public Participante(String dni, String nombre, String email, Conferencia conferencia) {
         super(dni, nombre);
-        this.rol = rol;
         this.email = email;
         conferencias.add(conferencia);
     }
-    public Participante(String dni, String nombre, String rol, String email, boolean confirmado) {
+    public Participante(String dni, String nombre, String email, boolean confirmado) {
         super(dni, nombre);
-        this.rol = rol;
         this.email = email;
         this.confirmado = confirmado;
         conferencias = new ArrayList<>();
@@ -49,15 +45,7 @@ public class Participante extends A_Persona{
 
     @Override
     public String toString() {
-        return "Participante{" +super.toString()+ "rol=" + rol + " email="+email+" confirmado="+confirmado+'}';
-    }
-
-    public String getRol() {
-        return rol;
-    }
-
-    public void setRol(String rol) {
-        this.rol = rol;
+        return "Participante{" +super.toString()+ " email="+email+" confirmado="+confirmado+'}';
     }
 
     public String getEmail() {

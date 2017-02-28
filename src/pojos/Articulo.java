@@ -18,7 +18,7 @@ public class Articulo {
     public static final String TAM_LARGO = "largo";
     
     private int id;
-    private int nombre;
+    private String nombre;
     private String tam;
     private String tema;
     private ArrayList<Autor> autores; //
@@ -26,7 +26,7 @@ public class Articulo {
     public Articulo() {
     }
 
-    public Articulo(int id, int nombre, String tam, String tema) {
+    public Articulo(int id, String nombre, String tam, String tema) {
         this.id = id;
         this.nombre = nombre;
         this.tam = tam;
@@ -34,7 +34,7 @@ public class Articulo {
         autores = new ArrayList<>();
     }
 
-    public Articulo(int id, int nombre, String tam, String tema, ArrayList<Autor> autores) {
+    public Articulo(int id, String nombre, String tam, String tema, ArrayList<Autor> autores) {
         this.id = id;
         this.nombre = nombre;
         this.tam = tam;
@@ -55,11 +55,11 @@ public class Articulo {
         this.id = id;
     }
 
-    public int getNombre() {
+    public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(int nombre) {
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 

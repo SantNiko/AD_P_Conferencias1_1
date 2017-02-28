@@ -21,13 +21,14 @@ public class Sesion {
     private Date fechaHoraInicio;
     private double duracion;
     private Articulo articulo;
+    private Conferencia conferencia;
     private ArrayList<Participante> oradores;
     
 
     public Sesion() {
     }
 
-    public Sesion(int id, String nombre, String info, Date fechaHoraInicio, double duracion, Participante orador, Articulo articulo) {
+    public Sesion(int id, String nombre, String info, Date fechaHoraInicio, double duracion, Participante orador, Articulo articulo, Conferencia conferencia) {
         this.id = id;
         this.nombre = nombre;
         this.info = info;
@@ -35,9 +36,10 @@ public class Sesion {
         this.duracion = duracion;
         this.oradores.add(orador);
         this.articulo = articulo;
+        this.conferencia = conferencia;
     }
 
-    public Sesion(int id, String nombre, String info, Date fechaHoraInicio, double duracion, ArrayList<Participante> oradores, Articulo articulo) {
+    public Sesion(int id, String nombre, String info, Date fechaHoraInicio, double duracion, ArrayList<Participante> oradores, Articulo articulo, Conferencia conferencia) {
         this.id = id;
         this.nombre = nombre;
         this.info = info;
@@ -45,6 +47,7 @@ public class Sesion {
         this.duracion = duracion;
         this.oradores = oradores;
         this.articulo = articulo;
+        this.conferencia = conferencia;
     }
 
     @Override
@@ -139,6 +142,14 @@ public class Sesion {
 
     public void setInfo(String info) {
         this.info = info;
+    }
+
+    public Conferencia getConferencia() {
+        return conferencia;
+    }
+
+    public void setConferencia(Conferencia conferencia) {
+        this.conferencia = conferencia;
     }
     
 }

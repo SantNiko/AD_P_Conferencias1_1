@@ -21,7 +21,6 @@ public class Conferencia {
     private Date fechaHoraInicio;
     private Date fechaHoraFin;
     private double precio;
-    private ArrayList<Sesion> sesiones;
     private ArrayList<A_Persona> participantes;
 
     public Conferencia() {
@@ -30,27 +29,24 @@ public class Conferencia {
     public Conferencia(int id, String nombre, Date fechaHoraInicio, Date fechaHoraFin, double precio) {
         this.id = id;
         this.nombre = nombre;
-        this.sesiones = new ArrayList<>();
         this.participantes = new ArrayList();
         this.fechaHoraInicio = fechaHoraInicio;
         this.fechaHoraFin = fechaHoraFin;
         this.precio = precio;
     }
 
-    public Conferencia(int id, String nombre, Sesion sesion, A_Persona participante, Date fechaHoraInicio, Date fechaHoraFin, double precio) {
+    public Conferencia(int id, String nombre, A_Persona participante, Date fechaHoraInicio, Date fechaHoraFin, double precio) {
         this.id = id;
         this.nombre = nombre;
-        this.sesiones.add(sesion);
         this.participantes.add(participante);
         this.fechaHoraInicio = fechaHoraInicio;
         this.fechaHoraFin = fechaHoraFin;
         this.precio = precio;
     }
 
-    public Conferencia(int id, String nombre, ArrayList<Sesion> sesiones, ArrayList<A_Persona> participantes, Date fechaHoraInicio, Date fechaHoraFin, double precio) {
+    public Conferencia(int id, String nombre,ArrayList<A_Persona> participantes, Date fechaHoraInicio, Date fechaHoraFin, double precio) {
         this.id = id;
         this.nombre = nombre;
-        this.sesiones = sesiones;
         this.participantes = participantes;
         this.fechaHoraInicio = fechaHoraInicio;
         this.fechaHoraFin = fechaHoraFin;
@@ -59,7 +55,7 @@ public class Conferencia {
 
     @Override
     public String toString() {
-        return "Conferencia{" + "id=" + id + ", nombre=" + nombre + ", sesiones=" + sesiones() + ", participantes=" + participantes() + ", fechaHoraInicio=" + fechaHoraInicio + ", fechaHoraFin=" + fechaHoraFin + ", precio=" + precio + '}';
+        return "Conferencia{" + "id=" + id + ", nombre=" + nombre + ", participantes=" + participantes() + ", fechaHoraInicio=" + fechaHoraInicio + ", fechaHoraFin=" + fechaHoraFin + ", precio=" + precio + '}';
     }
 
     @Override
@@ -81,9 +77,6 @@ public class Conferencia {
             return false;
         }
         if (!Objects.equals(this.nombre, other.nombre)) {
-            return false;
-        }
-        if (!Objects.equals(this.sesiones, other.sesiones)) {
             return false;
         }
         if (!Objects.equals(this.participantes, other.participantes)) {
@@ -112,45 +105,6 @@ public class Conferencia {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    public ArrayList<Sesion> getSesiones() {
-        return sesiones;
-    }
-
-    public void setSesiones(ArrayList<Sesion> sesiones) {
-        this.sesiones = sesiones;
-    }
-    public Sesion getSesion(int i){
-        return sesiones.get(i);
-    }
-    
-    public Sesion getSesion(Sesion art){
-        int i  = sesiones.indexOf(art);
-        if (i == -1) {
-            return null;
-        }
-        return sesiones.get(i);
-    }
-    
-    public void setSesion(int i, Sesion aut){
-        sesiones.set(i, aut);
-    }
-    
-    public boolean addSesion(Sesion aut){
-        return sesiones.add(aut);
-    }
-    
-    public boolean removeSesion(Sesion aut){
-        return sesiones.remove(aut);
-    }
-    
-    public boolean addSesion(Collection<Sesion> auts){
-        return sesiones.addAll(auts);
-    }
-    
-    public boolean removeSesion(Collection<Autor> auts){
-        return sesiones.removeAll(auts);
     }
     public ArrayList<A_Persona> getParticipantes() {
         return participantes;
@@ -215,15 +169,6 @@ public class Conferencia {
 
     public void setPrecio(double precio) {
         this.precio = precio;
-    }
-    
-    private String sesiones(){
-        String r = "{";
-        for (Sesion ses : sesiones) {
-            r+=ses.getNombre()+",";
-        }
-        r = ""+r.subSequence(0, r.length()-1)+"}";
-        return r;
     }
     
     private String participantes(){
