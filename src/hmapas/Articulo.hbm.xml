@@ -10,7 +10,7 @@
         <property name="nombre"/>
         <property name="tam"/>
         <property name="tema"/>
-        <set cascade="save-update" name="articulos" table="articulos_autores" inverse="true">
+        <set cascade="save-update" name="autores" table="articulos_autores" inverse="true">
             <key>
                 <column name="articulo"/>
             </key>

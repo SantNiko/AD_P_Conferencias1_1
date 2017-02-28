@@ -22,6 +22,18 @@
                 <key column="dni" />
                 <property name="email"/>
                 <property name="confirmado"/>
+                <set name="conferencias" table="participantes_conferencias" cascade="save-update">
+                    <key>
+                        <column name="participante"/>
+                    </key>
+                    <many-to-many class="pojos.Conferencia" column="conferencia"/>
+                </set>
+                <set name="sesiones" table="oradores_sesiones" cascade="save-update" >
+                    <key>
+                        <column name="orador"/>
+                    </key>
+                    <many-to-many class="pojos.Sesion" column="sesion"/>
+                </set>
         </joined-subclass>
       
     </class>

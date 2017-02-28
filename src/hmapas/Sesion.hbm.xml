@@ -12,10 +12,14 @@
         <property name="fechaHoraInicio"/>
         <property name="duracion"/>
         <property name="articulo"/>
-        <set cascade="save-update" name="participantes" table="sesiones">
-            <key column="sesion"/>
-            <one-to-many class="pojos.Paricipante"/>
-        </set>
+        <many-to-one class="pojos.Conferencia" name="conferencia"/>
+        <many-to-one class="pojos.Articulo" name="articulo"/>
+        <set name="oradores" table="oradores_sesiones" cascade="save-update" >
+                    <key>
+                        <column name="sesion"/>
+                    </key>
+                    <many-to-many class="pojos.Participante" column="orador"/>
+                </set>
     </class>
 
 </hibernate-mapping>

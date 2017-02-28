@@ -11,11 +11,7 @@
         <property name="fechaHoraInicio"/>
         <property name="fechaHoraFin"/>
         <property name="precio"/>
-        <set cascade="save-update" name="sesiones" table="conferencias">
-            <key column="conferencia"/>
-            <one-to-many class="pojos.Sesion"/>
-        </set>
-        <set cascade="save-update" name="participantes" table="participantesconferencia" inverse="true">
+        <set cascade="save-update" name="participantes" table="participantes_conferencias" inverse="true">
             <key column="conferencia"/>
             <many-to-many class="pojos.Participante" column="participante"/>
         </set>
