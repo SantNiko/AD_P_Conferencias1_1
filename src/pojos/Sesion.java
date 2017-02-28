@@ -19,7 +19,7 @@ public class Sesion {
     private String nombre;
     private String info;
     private Date fechaHoraInicio;
-    private double duración;
+    private double duracion;
     private Articulo articulo;
     private ArrayList<Participante> oradores;
     
@@ -27,22 +27,22 @@ public class Sesion {
     public Sesion() {
     }
 
-    public Sesion(int id, String nombre, String info, Date fechaHoraInicio, double duración, Participante orador, Articulo articulo) {
+    public Sesion(int id, String nombre, String info, Date fechaHoraInicio, double duracion, Participante orador, Articulo articulo) {
         this.id = id;
         this.nombre = nombre;
         this.info = info;
         this.fechaHoraInicio = fechaHoraInicio;
-        this.duración = duración;
+        this.duracion = duracion;
         this.oradores.add(orador);
         this.articulo = articulo;
     }
 
-    public Sesion(int id, String nombre, String info, Date fechaHoraInicio, double duración, ArrayList<Participante> oradores, Articulo articulo) {
+    public Sesion(int id, String nombre, String info, Date fechaHoraInicio, double duracion, ArrayList<Participante> oradores, Articulo articulo) {
         this.id = id;
         this.nombre = nombre;
         this.info = info;
         this.fechaHoraInicio = fechaHoraInicio;
-        this.duración = duración;
+        this.duracion = duracion;
         this.oradores = oradores;
         this.articulo = articulo;
     }
@@ -62,7 +62,7 @@ public class Sesion {
         if (this.id != other.id) {
             return false;
         }
-        if (Double.doubleToLongBits(this.duración) != Double.doubleToLongBits(other.duración)) {
+        if (Double.doubleToLongBits(this.duracion) != Double.doubleToLongBits(other.duracion)) {
             return false;
         }
         if (!Objects.equals(this.nombre, other.nombre)) {
@@ -91,12 +91,12 @@ public class Sesion {
         this.fechaHoraInicio = fechaHoraInicio;
     }
 
-    public double getDuración() {
-        return duración;
+    public double getDuracion() {
+        return duracion;
     }
 
-    public void setDuración(double duración) {
-        this.duración = duración;
+    public void setDuración(double duracion) {
+        this.duracion = duracion;
     }
 
     public ArrayList<Participante> getOradores() {
