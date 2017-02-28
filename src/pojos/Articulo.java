@@ -21,7 +21,7 @@ public class Articulo {
     private int nombre;
     private String tam;
     private String tema;
-    private ArrayList<Autor> autores;
+    private ArrayList<Autor> autores; //
 
     public Articulo() {
     }

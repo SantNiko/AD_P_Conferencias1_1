@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="hpojos.A_Persona" table="personas">
+        <id name="dni" column="dni" type="string"/>
+        <property name="nombre" column="nombre"/>
+      
+        <joined-subclass name="pojos.Autor" table="autores">
+                <key column="dni" />
+                <set cascade="save-update" name="articulos" table="articulos_autores" inverse="false">
+                    <key>
+                        <column name="autor"/>
+                    </key>
+                    <many-to-many class="pojos.Articulo" column="articulo"/>
+                </set>
+        </joined-subclass>
+        <joined-subclass name="pojos.Participante" table="participantes">
+                <key column="dni" />
+                <property name="email"/>
+                <property name="confirmado"/>
+        </joined-subclass>
+      
+    </class>
+
+</hibernate-mapping>

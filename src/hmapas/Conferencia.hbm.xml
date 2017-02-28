@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="pojos.Conferencia" table="conferencias">
+        <id name="id"/>
+        <property name="nombre"/>
+        <property name="fechaHoraInicio"/>
+        <property name="fechaHoraFin"/>
+        <property name="precio"/>
+        <set cascade="save-update" name="sesiones" table="conferencias">
+            <key column="conferencia"/>
+            <one-to-many class="pojos.Sesion"/>
+        </set>
+        <set cascade="save-update" name="participantes" table="participantesconferencia" inverse="true">
+            <key column="conferencia"/>
+            <many-to-many class="pojos.Participante" column="participante"/>
+        </set>
+    </class>
+
+</hibernate-mapping>

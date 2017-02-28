@@ -18,35 +18,48 @@ public class Conferencia {
     
     private int id;
     private String nombre;
+    private Date fechaHoraInicio;
+    private Date fechaHoraFin;
+    private double precio;
     private ArrayList<Sesion> sesiones;
     private ArrayList<A_Persona> participantes;
-    private Date fechaHora;
-    private double precio;
 
     public Conferencia() {
     }
 
-    public Conferencia(int id, String nombre, Date fechaHora, double precio) {
+    public Conferencia(int id, String nombre, Date fechaHoraInicio, Date fechaHoraFin, double precio) {
         this.id = id;
         this.nombre = nombre;
-        this.fechaHora = fechaHora;
+        this.sesiones = new ArrayList<>();
+        this.participantes = new ArrayList();
+        this.fechaHoraInicio = fechaHoraInicio;
+        this.fechaHoraFin = fechaHoraFin;
         this.precio = precio;
-        sesiones = new ArrayList<>();
-        participantes = new ArrayList<>();
     }
 
-    public Conferencia(int id, String nombre, ArrayList<Sesion> sesiones, ArrayList<A_Persona> participantes, Date fechaHora, double precio) {
+    public Conferencia(int id, String nombre, Sesion sesion, A_Persona participante, Date fechaHoraInicio, Date fechaHoraFin, double precio) {
+        this.id = id;
+        this.nombre = nombre;
+        this.sesiones.add(sesion);
+        this.participantes.add(participante);
+        this.fechaHoraInicio = fechaHoraInicio;
+        this.fechaHoraFin = fechaHoraFin;
+        this.precio = precio;
+    }
+
+    public Conferencia(int id, String nombre, ArrayList<Sesion> sesiones, ArrayList<A_Persona> participantes, Date fechaHoraInicio, Date fechaHoraFin, double precio) {
         this.id = id;
         this.nombre = nombre;
         this.sesiones = sesiones;
         this.participantes = participantes;
-        this.fechaHora = fechaHora;
+        this.fechaHoraInicio = fechaHoraInicio;
+        this.fechaHoraFin = fechaHoraFin;
         this.precio = precio;
     }
 
     @Override
     public String toString() {
-        return "Conferencia{" + "id=" + id + ", nombre=" + nombre + ", sesiones=" + sesiones() + ", participantes=" + participantes() + ", fechaHora=" + fechaHora + ", precio=" + precio + '}';
+        return "Conferencia{" + "id=" + id + ", nombre=" + nombre + ", sesiones=" + sesiones() + ", participantes=" + participantes() + ", fechaHoraInicio=" + fechaHoraInicio + ", fechaHoraFin=" + fechaHoraFin + ", precio=" + precio + '}';
     }
 
     @Override
@@ -70,7 +83,16 @@ public class Conferencia {
         if (!Objects.equals(this.nombre, other.nombre)) {
             return false;
         }
-        if (!Objects.equals(this.fechaHora, other.fechaHora)) {
+        if (!Objects.equals(this.sesiones, other.sesiones)) {
+            return false;
+        }
+        if (!Objects.equals(this.participantes, other.participantes)) {
+            return false;
+        }
+        if (!Objects.equals(this.fechaHoraInicio, other.fechaHoraInicio)) {
+            return false;
+        }
+        if (!Objects.equals(this.fechaHoraFin, other.fechaHoraFin)) {
             return false;
         }
         return true;
@@ -170,13 +192,22 @@ public class Conferencia {
         return participantes.removeAll(auts);
     }
 
-    public Date getFechaHora() {
-        return fechaHora;
+    public Date getFechaHoraInicio() {
+        return fechaHoraInicio;
     }
 
-    public void setFechaHora(Date fechaHora) {
-        this.fechaHora = fechaHora;
+    public void setFechaHoraInicio(Date fechaHoraInicio) {
+        this.fechaHoraInicio = fechaHoraInicio;
     }
+
+    public Date getFechaHoraFin() {
+        return fechaHoraFin;
+    }
+
+    public void setFechaHoraFin(Date fechaHoraFin) {
+        this.fechaHoraFin = fechaHoraFin;
+    }
+
 
     public double getPrecio() {
         return precio;

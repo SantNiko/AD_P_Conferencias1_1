@@ -5,6 +5,8 @@
  */
 package pojos;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Niko
@@ -15,18 +17,39 @@ public class Participante extends A_Persona{
     public static final String ROL_PUBLICO = "orador";
     
     private String rol;
+    private String email;
+    private boolean confirmado;
+    private ArrayList<Conferencia> conferencias;
+    /* Aqui podriamos y seguramente era bastante correcto poner en vez de un 
+    atributo confirmado un atributo que fuera conferencias y seria un MAP con 
+    indice conferencia y valor booleano i está confirmado o no*/
 
     public Participante() {
     }
 
-    public Participante(String rol, String dni, String nombre) {
+    public Participante(String dni, String nombre, String rol, String email) {
         super(dni, nombre);
         this.rol = rol;
+        this.email = email;
+        conferencias = new ArrayList<>();
+    }
+    public Participante(String dni, String nombre, String rol, String email, Conferencia conferencia) {
+        super(dni, nombre);
+        this.rol = rol;
+        this.email = email;
+        conferencias.add(conferencia);
+    }
+    public Participante(String dni, String nombre, String rol, String email, boolean confirmado) {
+        super(dni, nombre);
+        this.rol = rol;
+        this.email = email;
+        this.confirmado = confirmado;
+        conferencias = new ArrayList<>();
     }
 
     @Override
     public String toString() {
-        return "Participante{" +super.toString()+ "rol=" + rol + '}';
+        return "Participante{" +super.toString()+ "rol=" + rol + " email="+email+" confirmado="+confirmado+'}';
     }
 
     public String getRol() {
@@ -36,6 +59,20 @@ public class Participante extends A_Persona{
     public void setRol(String rol) {
         this.rol = rol;
     }
-    
-    
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public boolean isConfirmado() {
+        return confirmado;
+    }
+
+    public void setConfirmado(boolean confirmado) {
+        this.confirmado = confirmado;
+    }
 }

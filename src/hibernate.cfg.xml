@@ -7,5 +7,11 @@
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">usbw</property>
     <property name="hibernate.hbm2ddl.auto">create-drop</property>
+    <mapping resource="hmapas/Conferencia.hbm.xml"/>
+    <mapping resource="hmapas/A_Persona.hbm.xml"/>
+    <mapping resource="hmapas/Articulo.hbm.xml"/>
+    <mapping resource="hmapas/Autor.hbm.xml"/>
+    <mapping resource="hmapas/Participante.hbm.xml"/>
+    <mapping resource="hmapas/Sesion.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

@@ -5,6 +5,7 @@
  */
 package pojos;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Objects;
 
@@ -17,17 +18,32 @@ public class Sesion {
     private int id;
     private String nombre;
     private String info;
-    private Date fechaHora;
+    private Date fechaHoraInicio;
+    private double duración;
     private Articulo articulo;
+    private ArrayList<Participante> oradores;
+    
 
     public Sesion() {
     }
 
-    public Sesion(int id, String nombre, String info, Date fechaHora, Articulo articulo) {
+    public Sesion(int id, String nombre, String info, Date fechaHoraInicio, double duración, Participante orador, Articulo articulo) {
         this.id = id;
         this.nombre = nombre;
         this.info = info;
-        this.fechaHora = fechaHora;
+        this.fechaHoraInicio = fechaHoraInicio;
+        this.duración = duración;
+        this.oradores.add(orador);
+        this.articulo = articulo;
+    }
+
+    public Sesion(int id, String nombre, String info, Date fechaHoraInicio, double duración, ArrayList<Participante> oradores, Articulo articulo) {
+        this.id = id;
+        this.nombre = nombre;
+        this.info = info;
+        this.fechaHoraInicio = fechaHoraInicio;
+        this.duración = duración;
+        this.oradores = oradores;
         this.articulo = articulo;
     }
 
@@ -46,13 +62,19 @@ public class Sesion {
         if (this.id != other.id) {
             return false;
         }
+        if (Double.doubleToLongBits(this.duración) != Double.doubleToLongBits(other.duración)) {
+            return false;
+        }
         if (!Objects.equals(this.nombre, other.nombre)) {
             return false;
         }
         if (!Objects.equals(this.info, other.info)) {
             return false;
         }
-        if (!Objects.equals(this.fechaHora, other.fechaHora)) {
+        if (!Objects.equals(this.fechaHoraInicio, other.fechaHoraInicio)) {
+            return false;
+        }
+        if (!Objects.equals(this.oradores, other.oradores)) {
             return false;
         }
         if (!Objects.equals(this.articulo, other.articulo)) {
@@ -61,13 +83,31 @@ public class Sesion {
         return true;
     }
 
-    public Date getFechaHora() {
-        return fechaHora;
+    public Date getFechaHoraInicio() {
+        return fechaHoraInicio;
     }
 
-    public void setFechaHora(Date fechaHora) {
-        this.fechaHora = fechaHora;
+    public void setFechaHoraInicio(Date fechaHoraInicio) {
+        this.fechaHoraInicio = fechaHoraInicio;
     }
+
+    public double getDuración() {
+        return duración;
+    }
+
+    public void setDuración(double duración) {
+        this.duración = duración;
+    }
+
+    public ArrayList<Participante> getOradores() {
+        return oradores;
+    }
+
+    public void setOradores(ArrayList<Participante> oradores) {
+        this.oradores = oradores;
+    }
+
+    
 
     public Articulo getArticulo() {
         return articulo;

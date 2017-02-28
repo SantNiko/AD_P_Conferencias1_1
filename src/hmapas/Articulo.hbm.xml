@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="pojos.Articulo" table="articulos">
+         <id name="id"/>
+        <property name="nombre"/>
+        <property name="tam"/>
+        <property name="tema"/>
+        <set cascade="save-update" name="articulos" table="articulos_autores" inverse="true">
+            <key>
+                <column name="articulo"/>
+            </key>
+            <many-to-many class="pojos.Autor" column="autor"/>
+        </set>
+    </class>
+
+</hibernate-mapping>
