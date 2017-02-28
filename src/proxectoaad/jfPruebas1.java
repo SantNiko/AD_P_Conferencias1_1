@@ -20,10 +20,14 @@ import oracle.jrockit.jfr.tools.ConCatRepository;
  */
 public class jfPruebas1 extends javax.swing.JFrame {
 
+    
+    controlador.C control;
+    
     /**
      * Creates new form jfListConf
-     */
+     */    
     public jfPruebas1() {
+        control = new controlador.C();
         initComponents();
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         ListCellRenderer a;
@@ -155,11 +159,6 @@ public class jfPruebas1 extends javax.swing.JFrame {
         jScrollPaneConfe.setBorder(null);
 
         jListConfe.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        jListConfe.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jListConfe.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jListConfe.setToolTipText("");
         jListConfe.setAlignmentX(10.5F);
@@ -510,11 +509,6 @@ public class jfPruebas1 extends javax.swing.JFrame {
         jScrollPaneSesiones.setBorder(null);
 
         jListSesiones.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        jListSesiones.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jListSesiones.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jListSesiones.setToolTipText("");
         jListSesiones.setAlignmentX(10.5F);
@@ -620,11 +614,6 @@ public class jfPruebas1 extends javax.swing.JFrame {
         jScrollPaneParticipantes.setBorder(null);
 
         jListParticipantes.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        jListParticipantes.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jListParticipantes.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jListParticipantes.setToolTipText("");
         jListParticipantes.setAlignmentX(10.5F);
@@ -756,6 +745,10 @@ public class jfPruebas1 extends javax.swing.JFrame {
     private void jListConfeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jListConfeMouseClicked
         // TODO add your handling code here:
         System.out.println(this.jListConfe.getSelectedValue());
+        if (this.jListConfe.getSelectedValue() != null) {
+            controlador.C.setConfeSelect(this.jListConfe.getSelectedValue());
+            control.mostrarConfe(this);
+        }
     }//GEN-LAST:event_jListConfeMouseClicked
 
     private void jListSesionesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jListSesionesMouseClicked
@@ -1056,184 +1049,184 @@ public class jfPruebas1 extends javax.swing.JFrame {
         return lblDescripcion;
     }
 
-    public void setLblDescripcion(JLabel lblDescripcion) {
-        this.lblDescripcion = lblDescripcion;
+    public void setLblDescripcion(String text) {
+        this.lblDescripcion.setText(text);
     }
 
     public JLabel getLblDescripcionEdit() {
         return lblDescripcionEdit;
     }
 
-    public void setLblDescripcionEdit(JLabel lblDescripcionEdit) {
-        this.lblDescripcionEdit = lblDescripcionEdit;
+    public void setLblDescripcionEdit(String text) {
+        this.lblDescripcionEdit.setText(text);
     }
 
     public JLabel getLblFecha() {
         return lblFecha;
     }
 
-    public void setLblFecha(JLabel lblFecha) {
-        this.lblFecha = lblFecha;
+    public void setLblFecha(String text) {
+        this.lblFecha.setText(text);
     }
 
     public JLabel getLblFechaEdit() {
         return lblFechaEdit;
     }
 
-    public void setLblFechaEdit(JLabel lblFechaEdit) {
-        this.lblFechaEdit = lblFechaEdit;
+    public void setLblFechaEdit(String text) {
+        this.lblFechaEdit.setText(text);
     }
 
     public JLabel getLblHoraFin() {
         return lblHoraFin;
     }
 
-    public void setLblHoraFin(JLabel lblHoraFin) {
-        this.lblHoraFin = lblHoraFin;
+    public void setLblHoraFin(String text) {
+        this.lblHoraFin.setText(text);
     }
 
     public JLabel getLblHoraFinEdit() {
         return lblHoraFinEdit;
     }
 
-    public void setLblHoraFinEdit(JLabel lblHoraFinEdit) {
-        this.lblHoraFinEdit = lblHoraFinEdit;
+    public void setLblHoraFinEdit(String text) {
+        this.lblHoraFinEdit.setText(text);
     }
 
     public JLabel getLblHoraInicio() {
         return lblHoraInicio;
     }
 
-    public void setLblHoraInicio(JLabel lblHoraInicio) {
-        this.lblHoraInicio = lblHoraInicio;
+    public void setLblHoraInicio(String text) {
+        this.lblHoraInicio.setText(text);
     }
 
     public JLabel getLblHoraInicioEdit() {
         return lblHoraInicioEdit;
     }
 
-    public void setLblHoraInicioEdit(JLabel lblHoraInicioEdit) {
-        this.lblHoraInicioEdit = lblHoraInicioEdit;
+    public void setLblHoraInicioEdit(String text) {
+        this.lblHoraInicioEdit.setText(text);
     }
 
     public JLabel getLblInfoConfe() {
         return lblInfoConfe;
     }
 
-    public void setLblInfoConfe(JLabel lblInfoConfe) {
-        this.lblInfoConfe = lblInfoConfe;
+    public void setLblInfoConfe(String text) {
+        this.lblInfoConfe.setText(text);
     }
 
     public JLabel getLblListado() {
         return lblListado;
     }
 
-    public void setLblListado(JLabel lblListado) {
-        this.lblListado = lblListado;
+    public void setLblListado(String text) {
+        this.lblListado.setText(text);
     }
 
     public JLabel getLblNParticipantes() {
         return lblNParticipantes;
     }
 
-    public void setLblNParticipantes(JLabel lblNParticipantes) {
-        this.lblNParticipantes = lblNParticipantes;
+    public void setLblNParticipantes(String text) {
+        this.lblNParticipantes.setText(text);
     }
 
     public JLabel getLblNParticipantesEdit() {
         return lblNParticipantesEdit;
     }
 
-    public void setLblNParticipantesEdit(JLabel lblNParticipantesEdit) {
-        this.lblNParticipantesEdit = lblNParticipantesEdit;
+    public void setLblNParticipantesEdit(String text) {
+        this.lblNParticipantesEdit.setText(text);
     }
 
     public JLabel getLblNSesiones() {
         return lblNSesiones;
     }
 
-    public void setLblNSesiones(JLabel lblNSesiones) {
-        this.lblNSesiones = lblNSesiones;
+    public void setLblNSesiones(String text) {
+        this.lblNSesiones.setText(text);
     }
 
     public JLabel getLblNSesionesEdit() {
         return lblNSesionesEdit;
     }
 
-    public void setLblNSesionesEdit(JLabel lblNSesionesEdit) {
-        this.lblNSesionesEdit = lblNSesionesEdit;
+    public void setLblNSesionesEdit(String text) {
+        this.lblNSesionesEdit.setText(text);
     }
 
     public JLabel getLblNombre() {
         return lblNombre;
     }
 
-    public void setLblNombre(JLabel lblNombre) {
-        this.lblNombre = lblNombre;
+    public void setLblNombre(String text) {
+        this.lblNombre.setText(text);
     }
 
     public JLabel getLblNombreEdit() {
         return lblNombreEdit;
     }
 
-    public void setLblNombreEdit(JLabel lblNombreEdit) {
-        this.lblNombreEdit = lblNombreEdit;
+    public void setLblNombreEdit(String text) {
+        this.lblNombreEdit.setText(text);
     }
 
     public JLabel getLblParticipantes() {
         return lblParticipantes;
     }
 
-    public void setLblParticipantes(JLabel lblParticipantes) {
-        this.lblParticipantes = lblParticipantes;
+    public void setLblParticipantes(String text) {
+        this.lblParticipantes.setText(text);
     }
 
     public JLabel getLblPrecio() {
         return lblPrecio;
     }
 
-    public void setLblPrecio(JLabel lblPrecio) {
-        this.lblPrecio = lblPrecio;
+    public void setLblPrecio(String text) {
+        this.lblPrecio.setText(text);
     }
 
     public JLabel getLblPrecioEdit() {
         return lblPrecioEdit;
     }
 
-    public void setLblPrecioEdit(JLabel lblPrecioEdit) {
-        this.lblPrecioEdit = lblPrecioEdit;
+    public void setLblPrecioEdit(String text) {
+        this.lblPrecioEdit.setText(text);
     }
 
     public JLabel getLblSesiones() {
         return lblSesiones;
     }
 
-    public void setLblSesiones(JLabel lblSesiones) {
-        this.lblSesiones = lblSesiones;
+    public void setLblSesiones(String text) {
+        this.lblSesiones.setText(text);
     }
 
     public JLabel getLblTema() {
         return lblTema;
     }
 
-    public void setLblTema(JLabel lblTema) {
-        this.lblTema = lblTema;
+    public void setLblTema(String text) {
+        this.lblTema.setText(text);
     }
 
     public JLabel getLblTemaEdit() {
         return lblTemaEdit;
     }
 
-    public void setLblTemaEdit(JLabel lblTemaEdit) {
-        this.lblTemaEdit = lblTemaEdit;
+    public void setLblTemaEdit(String text) {
+        this.lblTemaEdit.setText(text);
     }
 
     public JLabel getLblTitulo() {
         return lblTitulo;
     }
 
-    public void setLblTitulo(JLabel lblTitulo) {
-        this.lblTitulo = lblTitulo;
+    public void setLblTitulo(String text) {
+        this.lblTitulo.setText(text);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

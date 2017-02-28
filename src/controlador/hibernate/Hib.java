@@ -7,6 +7,7 @@ package controlador.hibernate;
 
 import java.io.Serializable;
 import java.sql.Connection;
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
@@ -19,6 +20,9 @@ public class Hib {
     private static Session sesion;
 
     public static Session openSesion(){
+        return NHU.iniciarSession();
+    }
+    public static Session connect(){
         return NHU.iniciarSession();
     }
     
@@ -82,5 +86,21 @@ public class Hib {
     
     public static void cerrarBD(){
         NHU.closeSessionFactory();
+    }
+    
+    public static Object ver(Class dQuien){
+        //Session sesion = NewHibernateUtil.iniciarSession();
+        
+        Object objFound = null;
+        
+        try {
+            Criteria crit = sesion.createCriteria(dQuien);
+            objFound = crit.list();
+        } catch (Throwable e) {
+            System.out.println(e.getMessage());
+            System.out.println("Error en BD.ver()");
+        }
+        //sesion.close();
+        return objFound;
     }
 }

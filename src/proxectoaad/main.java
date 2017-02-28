@@ -112,16 +112,19 @@ public class main extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnHibernateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHibernateActionPerformed
+        controlador.hibernate.Hib.connect();
         jfPruebas1 lista = new jfPruebas1();
         lista.setVisible(true);
     }//GEN-LAST:event_btnHibernateActionPerformed
 
     private void btnNeodatisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNeodatisActionPerformed
+        //controlador.neodatis.Neo.connect();
         jfPruebas1 lista = new jfPruebas1();
         lista.setVisible(true);
     }//GEN-LAST:event_btnNeodatisActionPerformed
 
     private void btnExistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExistActionPerformed
+        //controlador.exist.X.connect();
         jfPruebas1 lista = new jfPruebas1();
         lista.setVisible(true);
     }//GEN-LAST:event_btnExistActionPerformed
