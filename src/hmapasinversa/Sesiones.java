@@ -1,7 +1,8 @@
 package hmapasinversa;
-// Generated 28-feb-2017 16:09:16 by Hibernate Tools 4.3.1
+// Generated 01-mar-2017 18:25:25 by Hibernate Tools 4.3.1
 
 
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -15,29 +16,32 @@ public class Sesiones  implements java.io.Serializable {
      private Articulos articulos;
      private Conferencias conferencias;
      private String nombre;
-     private String info;
-     private double fechaHoraInicio;
+     private String tema;
+     private Date fechaHoraInicio;
+     private int duracion;
      private Set participanteses = new HashSet(0);
 
     public Sesiones() {
     }
 
 	
-    public Sesiones(int id, Articulos articulos, Conferencias conferencias, String nombre, String info, double fechaHoraInicio) {
+    public Sesiones(int id, Articulos articulos, Conferencias conferencias, String nombre, String tema, Date fechaHoraInicio, int duracion) {
         this.id = id;
         this.articulos = articulos;
         this.conferencias = conferencias;
         this.nombre = nombre;
-        this.info = info;
+        this.tema = tema;
         this.fechaHoraInicio = fechaHoraInicio;
+        this.duracion = duracion;
     }
-    public Sesiones(int id, Articulos articulos, Conferencias conferencias, String nombre, String info, double fechaHoraInicio, Set participanteses) {
+    public Sesiones(int id, Articulos articulos, Conferencias conferencias, String nombre, String tema, Date fechaHoraInicio, int duracion, Set participanteses) {
        this.id = id;
        this.articulos = articulos;
        this.conferencias = conferencias;
        this.nombre = nombre;
-       this.info = info;
+       this.tema = tema;
        this.fechaHoraInicio = fechaHoraInicio;
+       this.duracion = duracion;
        this.participanteses = participanteses;
     }
    
@@ -69,19 +73,26 @@ public class Sesiones  implements java.io.Serializable {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    public String getInfo() {
-        return this.info;
+    public String getTema() {
+        return this.tema;
     }
     
-    public void setInfo(String info) {
-        this.info = info;
+    public void setTema(String tema) {
+        this.tema = tema;
     }
-    public double getFechaHoraInicio() {
+    public Date getFechaHoraInicio() {
         return this.fechaHoraInicio;
     }
     
-    public void setFechaHoraInicio(double fechaHoraInicio) {
+    public void setFechaHoraInicio(Date fechaHoraInicio) {
         this.fechaHoraInicio = fechaHoraInicio;
+    }
+    public int getDuracion() {
+        return this.duracion;
+    }
+    
+    public void setDuracion(int duracion) {
+        this.duracion = duracion;
     }
     public Set getParticipanteses() {
         return this.participanteses;

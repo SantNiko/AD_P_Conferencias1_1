@@ -41,13 +41,13 @@ Contributor(s):
 -->
 <hibernate-reverse-engineering>
   <schema-selection match-catalog="hconferencias"/>
-  <table-filter match-name="oradores_sesiones"/>
-  <table-filter match-name="articulos_autores"/>
-  <table-filter match-name="personas"/>
-  <table-filter match-name="sesiones"/>
-  <table-filter match-name="articulos"/>
-  <table-filter match-name="participantes"/>
-  <table-filter match-name="conferencias"/>
-  <table-filter match-name="participantes_conferencias"/>
   <table-filter match-name="autores"/>
+  <table-filter match-name="conferencias"/>
+  <table-filter match-name="articulos_autores"/>
+  <table-filter match-name="sesiones"/>
+  <table-filter match-name="participantes"/>
+  <table-filter match-name="oradores_sesiones"/>
+  <table-filter match-name="articulos"/>
+  <table-filter match-name="participantes_conferencias"/>
+  <table-filter match-name="personas"/>
 </hibernate-reverse-engineering>

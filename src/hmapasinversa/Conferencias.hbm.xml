@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 28-feb-2017 16:09:17 by Hibernate Tools 4.3.1 -->
+<!-- Generated 01-mar-2017 18:25:26 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="hmapasinversa.Conferencias" table="conferencias" catalog="hconferencias" optimistic-lock="version">
         <id name="id" type="int">
@@ -11,8 +11,20 @@
         <property name="nombre" type="string">
             <column name="nombre" length="45" not-null="true" />
         </property>
-        <property name="fechaHoraInicio" type="timestamp">
-            <column name="fechaHoraInicio" length="19" not-null="true" />
+        <property name="descripcion" type="string">
+            <column name="descripcion" length="45" not-null="true" />
+        </property>
+        <property name="fechaInicio" type="date">
+            <column name="fechaInicio" length="10" not-null="true" />
+        </property>
+        <property name="fechaFin" type="date">
+            <column name="fechaFin" length="10" not-null="true" />
+        </property>
+        <property name="horaInicio" type="date">
+            <column name="horaInicio" length="10" not-null="true" />
+        </property>
+        <property name="horaFin" type="date">
+            <column name="horaFin" length="10" not-null="true" />
         </property>
         <property name="precio" type="double">
             <column name="precio" precision="22" scale="0" not-null="true" />

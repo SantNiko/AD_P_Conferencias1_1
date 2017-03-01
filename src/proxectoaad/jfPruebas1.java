@@ -750,12 +750,12 @@ public class jfPruebas1 extends javax.swing.JFrame {
             if (obj instanceof hmapasinversa.Conferencias) {
                 hmapasinversa.Conferencias confe = (hmapasinversa.Conferencias)obj;
                 lblNombreEdit.setText(confe.getNombre());
-                lblFechaEdit.setText(df.format(confe.getFechaHoraInicio()));
+                lblFechaEdit.setText(df.format(confe.getFechaInicio()));
                 lblNSesionesEdit.setText(confe.getSesioneses().size()+"");
-                lblHoraFinEdit.setText(df.format(confe.getFechaHoraInicio()));
+                lblHoraFinEdit.setText(df.format(confe.getHoraFin()));
                 lblDescripcionEdit.setText(confe.getNombre());
                 lblTemaEdit.setText(confe.getNombre());
-                lblHoraInicioEdit.setText(df.format(confe.getFechaHoraInicio()));
+                lblHoraInicioEdit.setText(df.format(confe.getHoraInicio()));
                 lblNParticipantesEdit.setText(confe.getParticipantesConferenciases().size()+"");
                 lblPrecioEdit.setText(confe.getPrecio()+"");
             }

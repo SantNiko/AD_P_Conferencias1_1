@@ -1,5 +1,5 @@
 package hmapasinversa;
-// Generated 28-feb-2017 16:09:16 by Hibernate Tools 4.3.1
+// Generated 01-mar-2017 18:25:25 by Hibernate Tools 4.3.1
 
 
 

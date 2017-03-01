@@ -1,5 +1,5 @@
 package hmapasinversa;
-// Generated 28-feb-2017 16:09:16 by Hibernate Tools 4.3.1
+// Generated 01-mar-2017 18:25:25 by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -14,6 +14,7 @@ public class Participantes  implements java.io.Serializable {
      private String dni;
      private Personas personas;
      private String email;
+     private boolean confirmado;
      private Set participantesConferenciases = new HashSet(0);
      private Set sesioneses = new HashSet(0);
 
@@ -21,13 +22,15 @@ public class Participantes  implements java.io.Serializable {
     }
 
 	
-    public Participantes(Personas personas, String email) {
+    public Participantes(Personas personas, String email, boolean confirmado) {
         this.personas = personas;
         this.email = email;
+        this.confirmado = confirmado;
     }
-    public Participantes(Personas personas, String email, Set participantesConferenciases, Set sesioneses) {
+    public Participantes(Personas personas, String email, boolean confirmado, Set participantesConferenciases, Set sesioneses) {
        this.personas = personas;
        this.email = email;
+       this.confirmado = confirmado;
        this.participantesConferenciases = participantesConferenciases;
        this.sesioneses = sesioneses;
     }
@@ -52,6 +55,13 @@ public class Participantes  implements java.io.Serializable {
     
     public void setEmail(String email) {
         this.email = email;
+    }
+    public boolean isConfirmado() {
+        return this.confirmado;
+    }
+    
+    public void setConfirmado(boolean confirmado) {
+        this.confirmado = confirmado;
     }
     public Set getParticipantesConferenciases() {
         return this.participantesConferenciases;

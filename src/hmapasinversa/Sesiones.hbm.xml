@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 28-feb-2017 16:09:17 by Hibernate Tools 4.3.1 -->
+<!-- Generated 01-mar-2017 18:25:26 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="hmapasinversa.Sesiones" table="sesiones" catalog="hconferencias" optimistic-lock="version">
         <id name="id" type="int">
@@ -17,11 +17,14 @@
         <property name="nombre" type="string">
             <column name="nombre" length="45" not-null="true" />
         </property>
-        <property name="info" type="string">
-            <column name="info" length="45" not-null="true" />
+        <property name="tema" type="string">
+            <column name="tema" length="45" not-null="true" />
         </property>
-        <property name="fechaHoraInicio" type="double">
-            <column name="fechaHoraInicio" precision="22" scale="0" not-null="true" />
+        <property name="fechaHoraInicio" type="timestamp">
+            <column name="fechaHoraInicio" length="19" not-null="true" />
+        </property>
+        <property name="duracion" type="int">
+            <column name="duracion" not-null="true" />
         </property>
         <set name="participanteses" table="oradores_sesiones" inverse="false" lazy="true" fetch="select">
             <key>
