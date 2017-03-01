@@ -13,27 +13,25 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.ListCellRenderer;
 import oracle.jrockit.jfr.tools.ConCatRepository;
+import pojos.Conferencia;
 
 /**
  *
  * @author AnxoPregal
  */
 public class jfPruebas1 extends javax.swing.JFrame {
-
-    
-    controlador.C control;
     
     /**
      * Creates new form jfListConf
      */    
     public jfPruebas1() {
-        control = new controlador.C();
         initComponents();
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         ListCellRenderer a;
         
     }
 
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -744,10 +742,21 @@ public class jfPruebas1 extends javax.swing.JFrame {
 
     private void jListConfeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jListConfeMouseClicked
         // TODO add your handling code here:
-        System.out.println(this.jListConfe.getSelectedValue());
-        if (this.jListConfe.getSelectedValue() != null) {
-            controlador.C.setConfeSelect(this.jListConfe.getSelectedValue());
-            control.mostrarConfe(this);
+        Object obj = this.jListConfe.getSelectedValue();
+        System.out.println(obj);
+        if (obj != null) {
+            if (obj instanceof Conferencia) {
+                Conferencia confe = (Conferencia)obj;
+                lblNombreEdit.setText(confe.getNombre());
+                lblFechaEdit.setText(confe.getNombre());
+                lblNSesionesEdit.setText(confe.getNombre());
+                lblNombreEdit.setText(confe.getNombre());
+                lblNombreEdit.setText(confe.getNombre());
+                lblNombreEdit.setText(confe.getNombre());
+                lblNombreEdit.setText(confe.getNombre());
+                lblNombreEdit.setText(confe.getNombre());
+                lblNombreEdit.setText(confe.getNombre());
+            }
         }
     }//GEN-LAST:event_jListConfeMouseClicked
 

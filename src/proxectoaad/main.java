@@ -16,10 +16,13 @@ import javax.swing.JPanel;
  */
 public class main extends javax.swing.JFrame {
 
+    controlador.C control;
+    
     /**
      * Creates new form main
      */
     public main() {
+        control = new controlador.C();
         initComponents();
         
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
@@ -114,6 +117,7 @@ public class main extends javax.swing.JFrame {
     private void btnHibernateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHibernateActionPerformed
         controlador.hibernate.Hib.connect();
         jfPruebas1 lista = new jfPruebas1();
+        
         lista.setVisible(true);
     }//GEN-LAST:event_btnHibernateActionPerformed
 
