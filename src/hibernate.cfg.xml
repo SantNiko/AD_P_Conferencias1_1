@@ -6,7 +6,6 @@
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3307/hconferencias</property>
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">usbw</property>
-    <property name="hibernate.hbm2ddl.auto">create-drop</property> 
     <mapping resource="hmapasinversa/Personas.hbm.xml"/>
     <mapping resource="hmapasinversa/ParticipantesConferencias.hbm.xml"/>
     <mapping resource="hmapasinversa/Participantes.hbm.xml"/>

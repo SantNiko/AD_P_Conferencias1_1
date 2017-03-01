@@ -5,6 +5,7 @@
  */
 package proxectoaad;
 
+import java.text.DateFormat;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -742,20 +743,21 @@ public class jfPruebas1 extends javax.swing.JFrame {
 
     private void jListConfeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jListConfeMouseClicked
         // TODO add your handling code here:
+        DateFormat df = DateFormat.getDateInstance();
         Object obj = this.jListConfe.getSelectedValue();
         System.out.println(obj);
         if (obj != null) {
-            if (obj instanceof Conferencia) {
-                Conferencia confe = (Conferencia)obj;
+            if (obj instanceof hmapasinversa.Conferencias) {
+                hmapasinversa.Conferencias confe = (hmapasinversa.Conferencias)obj;
                 lblNombreEdit.setText(confe.getNombre());
-                lblFechaEdit.setText(confe.getNombre());
-                lblNSesionesEdit.setText(confe.getNombre());
-                lblNombreEdit.setText(confe.getNombre());
-                lblNombreEdit.setText(confe.getNombre());
-                lblNombreEdit.setText(confe.getNombre());
-                lblNombreEdit.setText(confe.getNombre());
-                lblNombreEdit.setText(confe.getNombre());
-                lblNombreEdit.setText(confe.getNombre());
+                lblFechaEdit.setText(df.format(confe.getFechaHoraInicio()));
+                lblNSesionesEdit.setText(confe.getSesioneses().size()+"");
+                lblHoraFinEdit.setText(df.format(confe.getFechaHoraInicio()));
+                lblDescripcionEdit.setText(confe.getNombre());
+                lblTemaEdit.setText(confe.getNombre());
+                lblHoraInicioEdit.setText(df.format(confe.getFechaHoraInicio()));
+                lblNParticipantesEdit.setText(confe.getParticipantesConferenciases().size()+"");
+                lblPrecioEdit.setText(confe.getPrecio()+"");
             }
         }
     }//GEN-LAST:event_jListConfeMouseClicked

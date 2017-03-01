@@ -37,6 +37,11 @@ public class Conferencias  implements java.io.Serializable {
        this.sesioneses = sesioneses;
        this.participantesConferenciases = participantesConferenciases;
     }
+
+    @Override
+    public String toString() {
+        return "Conferencias{" + "id=" + id + ", nombre=" + nombre + '}';
+    }
    
     public int getId() {
         return this.id;

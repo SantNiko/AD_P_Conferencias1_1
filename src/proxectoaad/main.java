@@ -5,10 +5,14 @@
  */
 package proxectoaad;
 
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import hmapasinversa.Conferencias;
 
 /**
  *
@@ -117,6 +121,15 @@ public class main extends javax.swing.JFrame {
     private void btnHibernateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHibernateActionPerformed
         controlador.hibernate.Hib.connect();
         jfPruebas1 lista = new jfPruebas1();
+        
+        DefaultListModel dflm = new DefaultListModel();
+        List conferencias = (List)controlador.hibernate.Hib.ver(Conferencias.class);
+        System.out.println(conferencias);
+        for (Object conferencia : conferencias) {
+            System.out.println(conferencia);
+            dflm.addElement(conferencia);
+        }
+        lista.getjListConfe().setModel(dflm);
         
         lista.setVisible(true);
     }//GEN-LAST:event_btnHibernateActionPerformed

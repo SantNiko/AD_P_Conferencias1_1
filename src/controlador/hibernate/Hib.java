@@ -19,11 +19,9 @@ public class Hib {
     
     private static Session sesion;
 
-    public static Session openSesion(){
-        return NHU.iniciarSession();
-    }
     public static Session connect(){
-        return NHU.iniciarSession();
+        sesion  = NHU.iniciarSession();
+        return sesion;
     }
     
     public static Connection closeSesion(){
